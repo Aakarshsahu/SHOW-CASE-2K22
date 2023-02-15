@@ -1,0 +1,734 @@
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Open+Sans:wght@600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Mochiy Pop One", sans-serif;
+  overflow-x: hidden;
+}
+.top{
+  height: 100%;
+  width: 100%;
+  background-attachment: fixed;
+}
+
+nav{
+  width: 100%;
+  height: 10%;
+  /* background-color: red; */
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-family: Gilroy;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  /* font-size: 20px; */
+}
+
+.container {
+  height: 50px;
+  width: 100vw;
+  z-index: 100;
+  position: relative;
+  /* background-color: #111; */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+
+.close-container {
+  height: 50px;
+  width: 50px;
+  background-color: rgba(1, 1, 1, 0.7);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -7rem;
+}
+
+.container:hover .close-container {
+  margin-top: 10px;
+  animation: slideDowen 1s ease;
+}
+
+.container.show {
+  opacity: 1;
+}
+
+@keyframes slideDowen {
+  0% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translateY(8%);
+  }
+  65% {
+    transform: translateY(-4%);
+  }
+  80% {
+    transform: translateY(4%);
+  }
+  95% {
+    transform: translateY(-2%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.close-container p {
+  cursor: pointer;
+}
+
+.close-container p:hover {
+  transform: scale(1.1);
+}
+
+.section {
+  /* position: relative; */
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.video-container {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.video-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(1, 1, 1, 0.6);
+}
+
+.video {
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.video2 {
+  width: 0%;
+  height: 0%;
+  min-height: 0%;
+  min-width: 0%;
+}
+
+.video2.play {
+  z-index: 11;
+  position: relative;
+  animation: popup 1500ms ease-in-out forwards;
+}
+
+@keyframes popup {
+  0% {
+    width: 0%;
+    height: 0%;
+  }
+  50% {
+    height: 2px;
+    width: 100%;
+  }
+  100% {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.text {
+  z-index: 10;
+  position: relative;
+  /* background-color: #111; */
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.text h2 {
+  color: transparent;
+  -webkit-text-stroke: 2px #fff;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: transparent;
+  border: 1px solid #fff;
+  padding: 0.5rem 2rem;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.8s;
+  font-family: "open sans";
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #fff;
+  color: #111;
+}
+
+
+.page2{
+  height: 100vh;
+  width: 100vw;
+  /* background-color: rgba(52, 49, 49, 0.906); */
+  background-image: url(https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  margin-top: -3.3%;
+}
+
+.LearnCssAnimation {
+  transform-origin: 50% 50% 0px;
+  animation-name: ImgRotate3dAnimation;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-delay: 2s; 
+}
+
+@keyframes ImgRotate3dAnimation {
+  50%  { transform: rotate3d(2, 0, 1, 180deg); }
+  100% { transform: rotate3d(2, 0, 1, 360deg); }
+}
+
+.svg{
+  margin-left: -5%;
+}
+
+.page3{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  /* overflow: hidden; */
+  /* background-color: rgb(48, 62, 55); */
+  background-image: url(https://images.unsplash.com/photo-1517200578024-62d131797ec8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1114&q=80);
+  background-size: cover;
+  background-position: center;
+  font: 1.25em sans-serif;
+
+}
+
+
+/* modernizr targeting */
+.no-webanimations body{
+  background-color:blue;
+}
+/* 
+* Hides the element from the old browsers
+*/
+.no-webanimations svg#isi-wave{display:none;}
+
+/* 
+* Hides the element from browsers that can render the animations  */
+.webanimations .waves-img {display:none;}
+.no-webanimations .waves-img.img {display:inline-block;}
+
+/* your code from the forums */ 
+#isi-wave #wave {
+  -webkit-animation: moveWave 4s linear 0s infinite;
+  animation: moveWave 4s linear 0s infinite;
+}
+#isi-wave #bubble_1 {
+  -webkit-transform: translate(0px, 220px);
+  -ms-transform: translate(0px, 220px);
+  transform: translate(0px, 220px);
+  -webkit-animation: moveIn 2s ease-in-out -1.8s infinite alternate;
+  animation: moveIn 2s ease-in-out -1.8s infinite alternate;
+}
+#isi-wave #bubble_2 {
+  -webkit-transform: translate(0px, 200px);
+  -ms-transform: translate(0px, 200px);
+  transform: translate(0px, 200px);
+  -webkit-animation: moveIn 2s ease-in-out -2.28s infinite alternate;
+  animation: moveIn 2s ease-in-out -2.28s infinite alternate;
+}
+#isi-wave #bubble_3 {
+  -webkit-transform: translate(0px, 230px);
+  -ms-transform: translate(0px, 230px);
+  transform: translate(0px, 230px);
+  -webkit-animation: moveIn 2s ease-in-out -3.2s infinite alternate;
+  animation: moveIn 2s ease-in-out -3.2s infinite alternate;
+}
+#isi-wave #bubble_4 {
+  -webkit-transform: translate(0px, 210px);
+  -ms-transform: translate(0px, 210px);
+  transform: translate(0px, 210px);
+  -webkit-animation: moveIn 2s ease-in-out -3.8s infinite alternate;
+  animation: moveIn 2s ease-in-out -3.8s infinite alternate;
+}
+#isi-wave #bubble_5 {
+  -webkit-transform: translate(0px, 210px);
+  -ms-transform: translate(0px, 210px);
+  transform: translate(0px, 210px);
+  -webkit-animation: moveIn 2s ease-in-out -0.92s infinite alternate;
+  animation: moveIn 2s ease-in-out -0.92s infinite alternate;
+}
+#isi-wave #bubble_6 {
+  -webkit-transform: translate(0px, 210px);
+  -ms-transform: translate(0px, 210px);
+  transform: translate(0px, 210px);
+  -webkit-animation: moveIn 2s ease-in-out -1.32s infinite alternate;
+  animation: moveIn 2s ease-in-out -1.32s infinite alternate;
+}
+.cssamimations.animations #isi-wave #bubble_7 {
+  -webkit-transform: translate(0px, 220px);
+  -ms-transform: translate(0px, 220px);
+  transform: translate(0px, 220px);
+  -webkit-animation: moveIn 2s ease-in-out -2.04s infinite alternate;
+  animation: moveIn 2s ease-in-out -2.04s infinite alternate;
+}
+@-webkit-keyframes moveIn {
+  to {
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes moveIn {
+  to {
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+  }
+}
+@-webkit-keyframes moveWave {
+  to {
+    -webkit-transform: translate(-1495.81px, 0px);
+    transform: translate(-1495.81px, 0px);
+  }
+}
+@keyframes moveWave {
+  to {
+    -webkit-transform: translate(-1495.81px, 0px);
+    transform: translate(-1495.81px, 0px);
+  }
+}
+
+
+/* Webflow default breakpoints */
+
+@media screen and (max-width: 991px) {
+  /* Your responsive CSS */
+}
+@media screen and (max-width: 767px) {
+  /* Your responsive CSS */
+}
+@media screen and (max-width: 479px) {
+  /* Your responsive CSS */
+}
+
+.futter{
+  width: 100%;
+  height: 50%;
+  margin-top: -23%;
+  position: absolute;
+  background-color: #00A6DD;
+  
+}
+
+/* CSS reset */
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.futter { font-size: 70%; }
+
+.futter {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
+}
+
+/* Typography =======================*/
+
+/* Headings */
+
+/* Main heading for card's front cover */
+.card-front__heading {
+  font-size: 1.5rem;
+  margin-top: .25rem;
+}
+
+/* Main heading for inside page */
+.inside-page__heading { 
+  padding-bottom: 1rem; 
+  width: 100%;
+}
+
+/* Mixed */
+
+/* For both inside page's main heading and 'view me' text on card front cover */
+.inside-page__heading,
+.card-front__text-view {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-top: .2rem;
+}
+
+.inside-page__heading--city,
+.card-front__text-view--city { color: #ff62b2; }
+
+.inside-page__heading--ski,
+.card-front__text-view--ski { color: #2aaac1; }
+
+.inside-page__heading--beach,
+.card-front__text-view--beach { color: #fa7f67; }
+
+.inside-page__heading--camping,
+.card-front__text-view--camping { color: #00b97c; }
+
+/* Front cover */
+
+.card-front__tp { color: #fafbfa; }
+
+/* For pricing text on card front cover */
+.card-front__text-price {
+  font-size: 1.2rem;
+  margin-top: -.2rem;
+}
+
+/* Back cover */
+
+/* For inside page's body text */
+.inside-page__text {
+  color: #333;
+}
+
+/* Icons ===========================================*/
+
+.card-front__icon {
+  fill: #fafbfa;
+  font-size: 3vw;
+  height: 3.25rem;
+  margin-top: -.5rem;
+  width: 3.25rem;
+}
+
+/* Buttons =================================================*/
+
+.inside-page__btn {
+  background-color: transparent;
+  border: 3px solid;
+  border-radius: .5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  overflow: hidden;
+  padding: .7rem .75rem;
+  position: relative;
+  text-decoration: none;
+  transition: all .3s ease;
+  width: 90%;
+  z-index: 10;
+}
+
+.inside-page__btn::before { 
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: scaleY(0);
+  transition: all .3s ease;
+  width: 100%;
+  z-index: -1;
+}
+
+.inside-page__btn--city { 
+  border-color: #ff40a1;
+  color: #ff40a1;
+}
+
+.inside-page__btn--city::before { 
+  background-color: #ff40a1;
+}
+
+.inside-page__btn--ski { 
+  border-color: #279eb2;
+  color: #279eb2;
+}
+
+.inside-page__btn--ski::before { 
+  background-color: #279eb2;
+}
+
+.inside-page__btn--beach { 
+  border-color: #fa7f67;
+  color: #fa7f67;
+}
+
+.inside-page__btn--beach::before { 
+  background-color: #fa7f67;
+}
+
+.inside-page__btn--camping { 
+  border-color: #00b97d;
+  color: #00b97d;
+}
+
+.inside-page__btn--camping::before { 
+  background-color: #00b97d;
+}
+
+.inside-page__btn:hover { 
+  color: #fafbfa;
+}
+
+.inside-page__btn:hover::before { 
+  transform: scaleY(1);
+}
+
+/* Layout Structure=========================================*/
+
+.main {
+  background: linear-gradient(
+    to bottom right,
+    #eee8dd,
+    #e3d9c6
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Container to hold all cards in one place */
+.card-area {
+  align-items: center;
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100%;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+
+/* Card ============================================*/
+
+/* Area to hold an individual card */
+.card-section {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+/* A container to hold the flip card and the inside page */
+.card {
+  background-color: rgba(0,0,0, .05);
+  box-shadow: -.1rem 1.7rem 6.6rem -3.2rem rgba(0,0,0,0.5);
+  height: 15rem;
+  position: relative;
+  transition: all 1s ease;
+  width: 15rem;
+}
+
+/* Flip card - covering both the front and inside front page */
+
+/* An outer container to hold the flip card. This excludes the inside page */
+.flip-card {
+  height: 15rem;
+  perspective: 100rem;
+  position: absolute;
+  right: 0;
+  transition: all 1s ease;
+  visibility: hidden;
+  width: 15rem;
+  z-index: 100;
+}
+
+/* The outer container's visibility is set to hidden. This is to make everything within the container NOT set to hidden  */
+/* This is done so content in the inside page can be selected */
+.flip-card > * {
+  visibility: visible;
+}
+
+/* An inner container to hold the flip card. This excludes the inside page */
+.flip-card__container {
+  height: 100%;
+  position: absolute;
+  right: 0;
+  transform-origin: left;
+  transform-style: preserve-3d;
+  transition: all 1s ease;
+  width: 100%;
+}
+
+.card-front,
+.card-back {
+  backface-visibility: hidden;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* Styling for the front side of the flip card */
+
+/* container for the front side */
+.card-front {
+  background-color: #fafbfa;
+  height: 15rem;
+  width: 15rem;
+}
+
+/* Front side's top section */
+.card-front__tp {
+  align-items: center;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 57% 90%, 50% 100%, 43% 90%, 0 90%);
+  display: flex;
+  flex-direction: column;
+  height: 12rem;
+  justify-content: center;
+  padding: .75rem;
+}
+
+.card-front__tp--city {
+  background: linear-gradient(
+    to bottom,
+    #ff73b9,
+    #ff40a1
+  );
+}
+
+.card-front__tp--ski {
+  background: linear-gradient(
+    to bottom,
+    #47c2d7,
+    #279eb2
+  );
+}
+
+.card-front__tp--beach {
+  background: linear-gradient(
+    to bottom,
+    #fb9b88,
+    #f86647
+  );
+}
+
+.card-front__tp--camping {
+  background: linear-gradient(
+    to bottom,
+    #00db93,
+    #00b97d
+  );
+}
+
+/* Front card's bottom section */
+.card-front__bt {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+/* Styling for the back side of the flip card */
+
+.card-back {
+  background-color: #fafbfa;
+  transform: rotateY(180deg);
+}
+
+/* Specifically targeting the <video> element */
+.video__container {
+  clip-path: polygon(0% 0%, 100% 0%, 90% 50%, 100% 100%, 0% 100%);
+  height: auto;
+  min-height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Inside page */
+
+.inside-page {
+  background-color: #fafbfa;
+  box-shadow: inset 20rem 0px 5rem -2.5rem rgba(0,0,0,0.25);
+  height: 100%;
+  padding: 1rem;
+  position: absolute;
+  right: 0;
+  transition: all 1s ease;
+  width: 15rem;
+  z-index: 1;
+}
+
+.inside-page__container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: center; 
+  width: 100%;
+}
+
+/* Functionality ====================================*/
+
+/* This is to keep the card centered (within its container) when opened */
+.card:hover {
+  box-shadow:
+  -.1rem 1.7rem 6.6rem -3.2rem rgba(0,0,0,0.75);
+  width: 30rem;
+}
+
+/* When the card is hovered, the flip card container will rotate */
+.card:hover .flip-card__container {
+  transform: rotateY(-180deg);
+}
+
+/* When the card is hovered, the shadow on the inside page will shrink to the left */
+.card:hover .inside-page {
+  box-shadow: inset 1rem 0px 5rem -2.5rem rgba(0,0,0,0.1);
+}
+
+/* Footer ====================================*/
+
+.footer {
+  background-color: #333;
+   margin-top: 3rem;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+.footer-text {
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
